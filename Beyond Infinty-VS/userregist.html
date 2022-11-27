@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>REGISTRATION FORM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="userreg.css">
+  <style>
+    .bg-color{
+    background-color: #f9fbfd;;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    .btn-rounded{
+    border-radius: 30px;
+    }
+  </style>
+  <script>
+    function regist_user(){
+        document.getElementById('so').innerHTML="";
+    }
+    function regist_owner(){
+        document.getElementById('su').innerHTML="owner";
+        document.getElementById('so').innerHTML="";
+        document.getElementById('sfu').innerHTML="";
+        alert("going");
+        document.getElementById('sname').innerHTML="";
+        document.getElementById('semail').innerHTML="Store Name";
+        document.getElementById('clr').innerHTML="";
+        document.getElementById('sownid').innerHTML="Generate Owner ID";
+    }
+  </script>
+</head>
+    <body class="bg-color">
+        <section class="container mt-5">
+            <div class="row justify-content-md-center">
+                <form class="col-md-6 col-sm-5 bg-white p-5 rounded shadow" action="stores.html">
+                    <div class="col-12 text-center">
+                        <h5 class="text-primary"><strong>REGISTRATION</strong></h5>
+                    </div>
+                    <span><a onclick="regist_user()" href="#" style="margin-left:5px;" id="su">user</a></span><span id="so"><a href="registration.html" style="margin-left:320px;">owner</a></span>
+                    <p></p>
+                    <span id="sfu">
+                    <div class="mb-3">
+                        <label for="name" class="form-label"><span id="sname">Name</span></label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Full Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label"><span id="semail">Email address</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label"><span id="pswd">Password</span>span></label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label"><span id="cpswd">Confirm Password</span>span></label>
+                      <input type="password" class="form-control" id="password" placeholder="Password" required>
+                  </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label"><span id="phno">Phone Number</span></label>
+                        <input type="text" class="form-control" id="phno" placeholder="Enter Phone Number" required>
+                    </div>
+                    <span id="clr">
+                    <div class="mb-3">
+                        <label for="name" class="form-label"><span id="clgnam">College Name</span></label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter College Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label"><span id="regno">Registration Number</span></label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Reg.no" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label"><span id="hstl">Hostel Name & Room no</span></label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Hostel Name & Room no" required>
+                    </div>
+                    </span>
+                    <div class="text-center mt-5">
+                    <a href="stores.html">
+                        <button type="submit" class="btn btn-primary btn-rounded w-75" data-bs-toggle="modal" data-bs-target="#myModal"><span id="sownid">Register Now</span></button>
+                    </a>
+                    </div>
+                    <div class="modal" id="myModal">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            PLEASE ENTER A VALID DETAILS
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </form>
+                <div class="mb-3">
+                <span id="sfo">
+                </span>
+                </div>
+            </div>
+        </section>
+</body>
+</html>

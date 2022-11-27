@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function mymout(){
+        document.getElementById('m').innerHTML = 'mouse out';
+    }
+    function onmouse(obj){
+        obj.innerHTML = 'done';
+        obj.addEventListener("onmouseout",mymout())
+    }
+    function d(){
+       alert('button clicked');
+       var a = document.getElementById('t').value;
+       alert(a);
+    }
+</script>
+<body align="center">
+    enter name: <input type="text" id="t">
+    <button onclick="d()">CLICK ME</button>
+    <button onmouseover="onmouse(this)" id="m">mouse over me</button>
+</body>
+</html>
